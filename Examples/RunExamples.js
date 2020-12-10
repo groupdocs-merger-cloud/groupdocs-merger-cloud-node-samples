@@ -7,29 +7,32 @@ global.serializer_1 = require("groupdocs-merger-cloud/lib/serializer");
 ////          GroupDocs.Merger Cloud API Examples
 //// ***********************************************************
 
-//TODO: Get your AppSID and AppKey at https://dashboard.groupdocs.cloud (free registration is required).
+//TODO: Get your ClientId and ClientSecret at https://dashboard.groupdocs.cloud (free registration is required).
 
-global.appSid = "XXXX-XXXX-XXXX-XXXX";
-global.appKey = "XXXXXXXXXXXXXXXX";
+global.clientId = "XXXX-XXXX-XXXX-XXXX";
+global.clientSecret = "XXXXXXXXXXXXXXXX";
 global.myStorage = "First Storage";
 
+const config = new conversion_cloud.Configuration(clientId, clientSecret);
+config.apiBaseUrl = "https://api.groupdocs.cloud";
+
 // construct DocumentApi
-global.documentApi = merger_cloud.DocumentApi.fromKeys(appSid, appKey);
+global.documentApi = merger_cloud.DocumentApi.fromConfig(config);
 
 // construct PagesApi
-global.pagesApi = merger_cloud.PagesApi.fromKeys(appSid, appKey);
+global.pagesApi = merger_cloud.PagesApi.fromConfig(config);
 
 // construct SecurityApi
-global.securityApi = merger_cloud.SecurityApi.fromKeys(appSid, appKey);
+global.securityApi = merger_cloud.SecurityApi.fromConfig(config);
 
 // construct InfoApi
-global.infoApi = merger_cloud.InfoApi.fromKeys(appSid, appKey);
+global.infoApi = merger_cloud.InfoApi.fromConfig(config);
 
 // construct FileApi
-global.fileApi = merger_cloud.FileApi.fromKeys(appSid, appKey);
+global.fileApi = merger_cloud.FileApi.fromConfig(config);
 
 // construct StorageApi
-global.storageApi = merger_cloud.StorageApi.fromKeys(appSid, appKey);
+global.storageApi = merger_cloud.StorageApi.fromConfig(config);
 
 async function examples() {
 
