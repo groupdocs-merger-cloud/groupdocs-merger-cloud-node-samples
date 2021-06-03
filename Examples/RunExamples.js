@@ -13,7 +13,7 @@ global.clientId = "XXXX-XXXX-XXXX-XXXX";
 global.clientSecret = "XXXXXXXXXXXXXXXX";
 global.myStorage = "First Storage";
 
-const config = new conversion_cloud.Configuration(clientId, clientSecret);
+const config = new merger_cloud.Configuration(clientId, clientSecret);
 config.apiBaseUrl = "https://api.groupdocs.cloud";
 
 // construct DocumentApi
@@ -50,6 +50,12 @@ async function examples() {
 
     // Join Some Pages From Multiple Documents
     await require('./DocumentOperations/JoinPagesFromVariousDocuments').Run();    
+
+    // Join multiple documents of various formats into one document.
+    await require('./DocumentOperations/JoinDocumentsCrossFormat').Run();        
+
+    // Import attachment into pdf document.
+    await require('./DocumentOperations/ImportAttachment').Run();     
     
     // Preview Document
     await require('./DocumentOperations/PreviewDocument').Run();
@@ -100,4 +106,9 @@ async function examples() {
     await require('./SecurityOperations/UpdateDocumentPassword').Run();
 }
 
-examples();
+try {
+    examples();    
+} catch (error) {
+    console.log(error);
+}
+
