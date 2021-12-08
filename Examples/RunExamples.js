@@ -34,6 +34,9 @@ global.fileApi = merger_cloud.FileApi.fromConfig(config);
 // construct StorageApi
 global.storageApi = merger_cloud.StorageApi.fromConfig(config);
 
+// construct LicenseApi
+global.licenseApi = merger_cloud.LicenseApi.fromConfig(config);
+
 async function examples() {
 
     // Uploading sample test files to storage
