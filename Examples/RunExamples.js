@@ -51,6 +51,9 @@ async function examples() {
     // Join Multiple Documents
     await require('./DocumentOperations/JoinMultipleDocuments').Run();
 
+    // Join word documents in continous mode
+    await require('./DocumentOperations/JoinWordDocumentsContinous').Run();    
+
     // Join Some Pages From Multiple Documents
     await require('./DocumentOperations/JoinPagesFromVariousDocuments').Run();    
 
