@@ -7,7 +7,7 @@
     "name": "GroupDocs Cloud Product Team"
   },
   "dependencies": {
-    "groupdocs-merger-cloud": "^22.5.0"
+    "groupdocs-merger-cloud": "^23.2.0"
   },
   "scripts": {
     "start": "node RunExamples.js"

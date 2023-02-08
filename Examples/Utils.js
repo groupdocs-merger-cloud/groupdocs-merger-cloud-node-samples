@@ -23,6 +23,8 @@ class Utils {
 		await this.UploadTestFile("WordProcessing/sample-10-pages.docx");
 		await this.UploadTestFile("Pdf/ten-pages.pdf");
 		await this.UploadTestFile("Pdf/one-page-password.pdf");
+		await this.UploadTestFile("Img/task1.jpg");
+		await this.UploadTestFile("Img/task2.jpg");
 	}	
 }
 
